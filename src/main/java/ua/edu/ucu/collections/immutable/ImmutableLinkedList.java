@@ -78,7 +78,7 @@ public final class ImmutableLinkedList implements ImmutableList {
             throw new IndexOutOfBoundsException();
         }
         Node currNode = this.head;
-        for (int i = 0; i < this.length; i ++){
+        for (int i = 0; i < this.length; i++) {
             if (i == index) {
                 return currNode.getValue();
             }
@@ -114,7 +114,7 @@ public final class ImmutableLinkedList implements ImmutableList {
     @Override
     public int indexOf(Object e) {
         Node currNode = this.head;
-        for (int i = 0; i < this.length; i ++){
+        for (int i = 0; i < this.length; i++) {
             if (currNode.getValue() == e) {
                 return i;
             }

@@ -1,14 +1,13 @@
 package ua.edu.ucu.collections.immutable;
 
 import java.util.Arrays;
-import java.util.Objects;
 
 public final class ImmutableArrayList implements ImmutableList {
     private Object[] elements;
     private int length;
 
     public ImmutableArrayList(Object[] elements) {
-        if (elements.length == 0){
+        if (elements.length == 0) {
             this.elements = new Object[]{};
             this.length = 0;
         } else {
@@ -91,7 +90,7 @@ public final class ImmutableArrayList implements ImmutableList {
     @Override
     public int indexOf(Object e) {
         for (int i = 0; i < this.length; i++) {
-            if (elements[i] == e){
+            if (elements[i] == e) {
                 return i;
             }
         }
@@ -111,7 +110,7 @@ public final class ImmutableArrayList implements ImmutableList {
 
     @Override
     public boolean isEmpty() {
-        if (this.length == 0){
+        if (this.length == 0) {
             return true;
         }
         return false;
@@ -119,6 +118,6 @@ public final class ImmutableArrayList implements ImmutableList {
 
     @Override
     public Object[] toArray() {
-        return this.elements;
+        return Arrays.copyOf(this.elements, this.length);
     }
 }
